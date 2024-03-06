@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNotes</title>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <h1>Book Notes</h1>
+   <% let i=0; %>
+   <%for( let book of bookItems){ %>
+        <img src="<%= imgurl[i] %>">
+        <h3><%= book.title %></h3>
+        <p> <%= book.rating %></p>
+        <p> <%= book.description %></p>
+        <% i=i+1; %>
+
+        
+        <form class="edit-form hidden" action="/edit" method="post">
+            <input type="hidden" name="updateitem_id" value="<%= book.id %>">
+            <input type="text" name="updated_title" value="<%= book.title %>" placeholder="Enter title" required>
+            <input type="text" name="updated_rating" value="<%= book.rating %>" placeholder="Enter rating" min="1" max="5" required>
+            <input type="text" name="updated_desc" value="<%= book.description %>" placeholder="Enter description" required>
+            <button type="submit">Save Changes</button>
+          </form>
+        <button class="edit-btn" onclick="showEditForm('<%= book.id %>')">Edit</button>
+        <form action="/delete" method="post">
+            <button type="submit" name="deleteitem_id" value="<%= book.id %>" >Delete</button>
+        </form>
+
+        
+   <%}%>
+
+   <form action="/add" method="post">
+    <label>Enter isbn number:</label>
+    <input type="text" name="isbn_no">
+    <label>Enter Title of the book:</label>
+    <input type="text" name="book_title">
+    <label>Rate the book out of 5:</label>
+    <input type="text" name="book_rating">
+    <label>Description:</label>
+    <input type="text" name="book_desc">
+    <button type="submit">Add</button>
+
+   </form>
+
+   <script>
+    function showEditForm(bookId) {
+      // Hide all edit forms
+      document.querySelectorAll('.edit-form').forEach(form => {
+        form.classList.add('hidden');
+      });
+
+      // Show edit form for the clicked book
+      document.getElementById('edit-form-' + bookId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
