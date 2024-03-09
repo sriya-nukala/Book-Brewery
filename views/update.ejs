@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/update" method="post">
+    <input type="hidden" name="updateditem_id" value="<%= books.id %>">
+    <label>Update Title of the book:</label>
+    <input type="text" name="updated_title" value="<%= books.title %>">
+    <label>Update ratings:</label>
+    <input type="text" name="updated_rating" value="<%= books.rating %>">
+    <label>Description:</label>
+    <input type="text" name="updated_desc" value="<%= books.description %>">
+    <button type="submit">Update</button>
+
+    </form>
+</body>
+</html>

@@ -33,12 +33,7 @@ app.get("/",async(req,res)=>{
     for(let book of books){
         const response = await axios.get("https://covers.openlibrary.org/b/isbn/"+book.isbn+".json");
         img_url.push(response.data.source_url);
-        // console.log(response.data.source_url);
     }
-    // console.log(response.data.source_url);
-    // const img_url=response.data.source_url;
-    // const img = await fetchImage("https://covers.openlibrary.org/b/isbn/9781542040464-M.json");
-    
     res.render("index.ejs",{imgurl:img_url,bookItems:books});
 });
 
@@ -59,7 +54,13 @@ app.post("/add",async(req,res)=>{
 });
 
 app.post("/edit",async(req,res)=>{
-    var id=req.body.updateitem_id;
+    var id=req.body.edititem_id;
+    const results= await db.query("SELECT * FROM bookdata WHERE id=$1",[id]);
+    res.render("update.ejs",{books:results.rows[0]});
+});
+
+app.post("/update",async(req,res)=>{
+    var id=req.body.updateditem_id;
     var title=req.body.updated_title;
     var rating=req.body.updated_rating;
     var description=req.body.updated_desc;
@@ -67,7 +68,6 @@ app.post("/edit",async(req,res)=>{
     const results= await db.query("UPDATE bookdata SET title=($1), rating=($2), description=($3) WHERE id=($4)",[title,rating,description,id]);
     res.redirect("/");
 });
-
 
 app.listen(port,()=>{
     console.log(`Listening to the port ${port}`);
