@@ -55,18 +55,38 @@
     </div>
     
   </section>
-  <form action="/add" method="post">
-    <label>Enter isbn number:</label>
-    <input type="text" name="isbn_no">
-    <label>Enter Title of the book:</label>
-    <input type="text" name="book_title">
-    <label>Rate the book out of 5:</label>
-    <input type="text" name="book_rating">
-    <label>Description:</label>
-    <input type="text" name="book_desc">
-    <button type="submit">Add</button>
 
-   </form>
+  <section id="addbook">
+    <h2>Submit your review</h2>
+    <p>Love sharing your thoughts on books? Contribute to our vibrant literary community by submitting your book reviews! Your insights could inspire fellow readers and help them discover their next favorite read. Join us in celebrating the magic of literature. Submit your review today!</p>
+    <div class="addbook-form"> 
+      <form action="/add" method="post">
+        <table>
+          <tr>
+            <td><label>Enter Book isbn number:</label></td>
+            <td><input type="text" name="isbn_no"></td>
+          </tr>
+          <tr>
+            <td><label>Enter Title of the book:</label></td>
+            <td><input type="text" name="book_title"></td>
+          </tr>
+          <tr>
+            <td><label>Rate the book out of 5:</label></td>
+            <td><input type="text" name="book_rating"></td>
+          </tr>
+          <tr>
+            <td><label>Description:</label></td>
+            <td><textarea type="text" name="book_desc" rows="5"></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><button type="submit">Add</button></td>
+          </tr>
+        </table>
+       </form>
+    </div>
+    
+  </section>
+ 
   
    
 

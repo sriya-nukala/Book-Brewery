@@ -3,19 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Book Brewery</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form action="/update" method="post">
-    <input type="hidden" name="updateditem_id" value="<%= books.id %>">
-    <label>Update Title of the book:</label>
-    <input type="text" name="updated_title" value="<%= books.title %>">
-    <label>Update ratings:</label>
-    <input type="text" name="updated_rating" value="<%= books.rating %>">
-    <label>Description:</label>
-    <input type="text" name="updated_desc" value="<%= books.description %>">
-    <button type="submit">Update</button>
+    <section id="header">
+        <h1>Book Brewery</h1>
+        <p id="subtitle">Explore. Discover. Review</p>
+    </section>
 
-    </form>
+    <section id="update-page">
+        <h2>Edit a review</h2>
+        <p>Edit your review now to ensure it accurately reflects your perspective and enriches our community's understanding of the book. Your words have the power to inspire others on their reading journey.</p>
+
+        <div class="edit-form">
+            <form action="/update" method="post">
+            <input type="hidden" name="updateditem_id" value="<%= books.id %>">
+
+            <table>
+                <tr>
+                    <td><label>Update Title of the book:</label></td>
+                    <td><input type="text" name="updated_title" value="<%= books.title %>"></td>
+                </tr>
+                <tr>
+                    <td><label>Update ratings:</label></td>
+                    <td><input type="text" name="updated_rating" value="<%= books.rating %>"></td>
+                </tr>
+                <tr>
+                    <td><label>Description:</label></td>
+                    <td><textarea id="desc" type="text" name="updated_desc"><%= books.description %></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button type="submit">Update</button></td>
+                </tr>
+            </table>
+        </form>
+        </div>
+    </section>
 </body>
 </html>

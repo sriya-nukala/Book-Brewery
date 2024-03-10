@@ -12,8 +12,6 @@
     font-weight: 400;
     font-style: normal;
     margin-bottom: 0px;
-
-    
 }
 #header #subtitle{
     text-align: center;
@@ -31,6 +29,7 @@
     font-size: 25px;
     margin-bottom: 20px;
 }
+
 #header .box p{
     font-size: 18px;
     text-align: justify;
@@ -40,17 +39,19 @@
     margin-left: 40px;
     margin-top: 40px;
 }
+
 #main-content .cont{
     width: 70vw;
     margin-left: 100px;
     margin-top: 50px;
-    
 }
+
 #main-content .bookdesc{
     display: flex;
     align-items: center;
     margin-bottom: 50px;
 }
+
 #main-content .bookdesc_img img{
     height: 250px;
     margin-right: 70px;
@@ -58,24 +59,21 @@
 
 #main-content .bookdesc_cont{
     align-items: start;
-    /* margin: 0px; */
-
 }
 
 #main-content .bookdesc_cont h3{
     font-size: 30px;
     margin-top: 10px;
-    
 }
 
 #main-content .bookdesc_cont label{
     margin-top: 10px;
-    
 }
+
 #main-content .buttons{
     display: flex;
-    
 }
+
 #main-content .buttons button{
     background-color: #76ABAE;
     height: 30px;
@@ -85,8 +83,96 @@
     color: #222831;
     font-size: 15px;
     margin: 15px;
+    cursor: pointer;
 }
 
+#addbook h2{
+    margin: 40px;
+}
+
+#addbook p{
+    margin: 40px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+#addbook .addbook-form{
+    width: 60vw;
+    align-content: center;
+    margin: 70px;
+}
+
+#addbook .addbook-form tr{
+    height: 50px;
+}
+
+#addbook .addbook-form input,textarea{
+    margin-left: 40px;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+#addbook .addbook-form textarea{
+    width: 300px;
+}
+
+#addbook .addbook-form button{
+    background-color: #76ABAE;
+    height: 30px;
+    width: 70px;
+    border:2px solid #76ABAE;
+    border-radius: 10px;
+    color: #222831;
+    font-size: 15px;
+    margin: 25px;
+    cursor: pointer;
+}
+
+#update-page h2{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+#update-page p{
+    margin: 40px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+#update-page .edit-form{
+    width: 60vw;
+    align-content: center;
+    margin: 70px;
+}
+
+#update-page .edit-form tr{
+    height: 50px;
+}
+
+#update-page .edit-form input,textarea{
+    margin-left: 40px;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+#update-page .edit-form textarea{
+    width: 300px;
+    height: 150px;
+}
+
+#update-page .edit-form button{
+    background-color: #76ABAE;
+    height: 30px;
+    width: 70px;
+    border:2px solid #76ABAE;
+    border-radius: 10px;
+    color: #222831;
+    font-size: 15px;
+    margin: 25px;
+    cursor: pointer;
+}
 
 
 
