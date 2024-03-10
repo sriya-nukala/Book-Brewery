@@ -28,6 +28,11 @@ Book Brewery is a dynamic web application designed to serve as your go-to platfo
 
 I welcome contributions from the community to enhance and improve the Book Brewery platform. Feel free to open issues for any bugs or feature requests, or submit pull requests with your enhancements.
 
+<br><br>
+**License:**
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
 
 
 
