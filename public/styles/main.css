@@ -1,0 +1,93 @@
+*{
+    background-color: #222831;
+    color: #EEEEEE;
+    font-family: "Poppins", sans-serif;
+}
+
+#header h1{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 50px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0px;
+
+    
+}
+#header #subtitle{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 0px;
+    color: #76ABAE;
+}
+
+#header .box{
+    margin: 40px;
+    margin-bottom: 0px;
+}
+
+#header .box h3{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+#header .box p{
+    font-size: 18px;
+    text-align: justify;
+}
+
+#main-content h2{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+#main-content .cont{
+    width: 70vw;
+    margin-left: 100px;
+    margin-top: 50px;
+    
+}
+#main-content .bookdesc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#main-content .bookdesc_img img{
+    height: 250px;
+    margin-right: 70px;
+}
+
+#main-content .bookdesc_cont{
+    align-items: start;
+    /* margin: 0px; */
+
+}
+
+#main-content .bookdesc_cont h3{
+    font-size: 30px;
+    margin-top: 10px;
+    
+}
+
+#main-content .bookdesc_cont label{
+    margin-top: 10px;
+    
+}
+#main-content .buttons{
+    display: flex;
+    
+}
+#main-content .buttons button{
+    background-color: #76ABAE;
+    height: 30px;
+    width: 70px;
+    border:2px solid #76ABAE;
+    border-radius: 10px;
+    color: #222831;
+    font-size: 15px;
+    margin: 15px;
+}
+
+
+
+
+
